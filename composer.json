@@ -1,0 +1,22 @@
+{
+    "name": "bredabeds/magento-calculateops",
+    "description": "Magento Module",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Dustin",
+            "email": "dustin@bredabeds.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Surething\\Calculateops\\": ""
+        }
+    }
+}

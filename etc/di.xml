@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\CatalogRule\Model\Rule" type="Surething\Calculateops\CatalogRule\Model\Rule" />
+    <preference for="Magento\Catalog\Model\Product\Option" type="Surething\Calculateops\Catalog\Model\Product\Option" />
+    <preference for="Magento\Catalog\Model\Product\Option\Value" type="Surething\Calculateops\Catalog\Model\Product\Option\Value" />
+    <preference for="Magento\Catalog\Model\Product\Option\Type\Select" type="Surething\Calculateops\Catalog\Model\Product\Option\Type\Select" />
+    <preference for="Magento\Catalog\Model\Product\Option\Type\DefaultType" type="Surething\Calculateops\Catalog\Model\Product\Option\Type\DefaultType" />
+    <preference for="Magento\Catalog\Block\Product\View\Options\AbstractOptions" type="Surething\Calculateops\Catalog\Block\Product\View\Options\AbstractOptions" />
+</config>
