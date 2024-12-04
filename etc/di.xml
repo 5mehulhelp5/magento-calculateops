@@ -1,9 +1,37 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <preference for="Magento\CatalogRule\Model\Rule" type="Surething\Calculateops\CatalogRule\Model\Rule" />
-    <preference for="Magento\Catalog\Model\Product\Option" type="Surething\Calculateops\Catalog\Model\Product\Option" />
-    <preference for="Magento\Catalog\Model\Product\Option\Value" type="Surething\Calculateops\Catalog\Model\Product\Option\Value" />
-    <preference for="Magento\Catalog\Model\Product\Option\Type\Select" type="Surething\Calculateops\Catalog\Model\Product\Option\Type\Select" />
-    <preference for="Magento\Catalog\Model\Product\Option\Type\DefaultType" type="Surething\Calculateops\Catalog\Model\Product\Option\Type\DefaultType" />
-    <preference for="Magento\Catalog\Block\Product\View\Options\AbstractOptions" type="Surething\Calculateops\Catalog\Block\Product\View\Options\AbstractOptions" />
+
+    <!-- https://github.com/magento/magento2/pull/38464 -->
+
+    <!-- ooedit: the Rule class below seems to be the same as the preference. disabling it makes no diff -->
+    <!-- <preference for="Magento\CatalogRule\Model\Rule" type="Surething\Calculateops\CatalogRule\Model\Rule" /> -->
+
+    <!-- <preference for="Magento\Catalog\Model\Product\Option" type="Surething\Calculateops\Catalog\Model\Product\Option" /> -->
+    <!-- <preference for="Magento\Catalog\Model\Product\Option\Value" type="Surething\Calculateops\Catalog\Model\Product\Option\Value" /> -->
+    <!-- <preference for="Magento\Catalog\Model\Product\Option\Type\Select" type="Surething\Calculateops\Catalog\Model\Product\Option\Type\Select" /> -->
+    <!-- ooedit: the two preferences below seem to not make any difference on hyva -->
+    <!-- <preference for="Magento\Catalog\Model\Product\Option\Type\DefaultType" type="Surething\Calculateops\Catalog\Model\Product\Option\Type\DefaultType" /> -->
+    <!-- <preference for="Magento\Catalog\Block\Product\View\Options\AbstractOptions" type="Surething\Calculateops\Catalog\Block\Product\View\Options\AbstractOptions" /> -->
+
+
+    <!-- Product Option plugins -->
+    <!-- ooedit: bufix for mirasvit_tm which cases the price to jump when adding a 2nd item to the cart -->
+    <preference for="Mirasvit\Tm\Plugin\PushOnCartAddPlugin" type="Surething\Calculateops\Model\Mirasvit\PushOnCartAddPlugin" />
+
+
+    <!-- <preference for="Magento\Catalog\Block\Product\View\Options\AbstractOptions" type="Surething\Calculateops\Block\Product\View\Options\OptionsProvider" /> -->
+
+
+    <type name="Magento\Catalog\Model\Product\Option"> 
+        <plugin name="surething_calculateops_product_option" type="Surething\Calculateops\Plugin\ProductOptionPlugin" sortOrder="10"/>
+    </type>
+
+    <type name="Magento\Catalog\Model\Product\Option\Value">
+        <plugin name="surething_calculateops_option_value" type="Surething\Calculateops\Plugin\ProductOptionValuePlugin" sortOrder="10"/>
+    </type>
+
+    <type name="Magento\Catalog\Model\Product\Option\Type\Select"> 
+        <plugin name="surething_calculateops_select_type" type="Surething\Calculateops\Plugin\SelectTypePlugin" sortOrder="10"/>
+    </type>
+
 </config>

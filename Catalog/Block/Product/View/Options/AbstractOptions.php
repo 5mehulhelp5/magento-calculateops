@@ -186,8 +186,7 @@ class AbstractOptions extends \Magento\Catalog\Block\Product\View\Options\Abstra
         );
 
         if ($flag) {
-            //ooedit: 2024-11-13: Do not add span tag
-            //$priceStr = '<span class="price-notice">' . $priceStr . '</span>';
+            $priceStr = '<span class="price-notice">' . $priceStr . '</span>';
         }
 
         return $priceStr;

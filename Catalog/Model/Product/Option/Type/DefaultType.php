@@ -448,5 +448,13 @@ class DefaultType extends \Magento\Catalog\Model\Product\Option\Type\DefaultType
             return $price;
         }
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function _resetState(): void
+    {
+        $this->_productOptions = [];
+    }
 }
 
