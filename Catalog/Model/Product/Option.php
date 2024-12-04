@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Surething\Calculateops\Catalog\Model\Product;
+namespace Ootri\Calculateops\Catalog\Model\Product;
 
 use Magento\Catalog\Api\Data\ProductCustomOptionInterface;
 use Magento\Catalog\Api\Data\ProductCustomOptionValuesInterface;
@@ -19,7 +19,7 @@ use Magento\Catalog\Model\Product\Option\Type\Select;
 use Magento\Catalog\Model\Product\Option\Type\Text;
 use Magento\Catalog\Model\Product\Option\Value;
 use Magento\Catalog\Model\ResourceModel\Product\Option\Value\Collection;
-use Surething\Calculateops\Catalog\Pricing\Price\CalculateCustomOptionCatalogRule;
+use Ootri\Calculateops\Catalog\Pricing\Price\CalculateCustomOptionCatalogRule;
 use Magento\Framework\App\ObjectManager;
 use Magento\Framework\EntityManager\MetadataPool;
 use Magento\Framework\Exception\LocalizedException;

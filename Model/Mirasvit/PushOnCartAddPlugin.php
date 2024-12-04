@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Surething\Calculateops\Model\Mirasvit;
+namespace Ootri\Calculateops\Model\Mirasvit;
 
 use Magento\Catalog\Model\Product;
 use Magento\Customer\Model\Session as CustomerSession;

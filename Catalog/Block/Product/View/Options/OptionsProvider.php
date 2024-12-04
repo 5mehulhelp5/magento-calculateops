@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace Surething\Calculateops\Block\Product\View\Options;
+namespace Ootri\Calculateops\Block\Product\View\Options;
 
 use Magento\Catalog\Block\Product\View\Options\AbstractOptions;
 use Magento\Framework\View\Element\Template\Context;
 use Magento\Framework\Pricing\Helper\Data as PricingHelper;
 use Magento\Catalog\Helper\Data as CatalogHelper;
-use Surething\Calculateops\Plugin\PriceCalculator;
+use Ootri\Calculateops\Plugin\PriceCalculator;
 
 class OptionsProvider extends AbstractOptions
 {

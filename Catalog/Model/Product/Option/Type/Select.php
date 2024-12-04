@@ -5,10 +5,10 @@
  */
 declare(strict_types=1);
 
-namespace Surething\Calculateops\Catalog\Model\Product\Option\Type;
+namespace Ootri\Calculateops\Catalog\Model\Product\Option\Type;
 
 use Magento\Catalog\Model\Product\Option\Value;
-use Surething\Calculateops\Catalog\Pricing\Price\CalculateCustomOptionCatalogRule;
+use Ootri\Calculateops\Catalog\Pricing\Price\CalculateCustomOptionCatalogRule;
 use Magento\Framework\App\ObjectManager;
 use Magento\Framework\Exception\LocalizedException;
 

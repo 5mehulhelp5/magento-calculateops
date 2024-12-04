@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Surething\Calculateops\Plugin;
+namespace Ootri\Calculateops\Plugin;
 
 use Magento\Catalog\Model\Product;
 use Magento\CatalogRule\Pricing\Price\CatalogRulePrice;

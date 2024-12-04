@@ -5,10 +5,10 @@
  */
 declare(strict_types=1);
 
-namespace Surething\Calculateops\Catalog\Block\Product\View\Options;
+namespace Ootri\Calculateops\Catalog\Block\Product\View\Options;
 
 use Magento\Catalog\Pricing\Price\BasePrice;
-use Surething\Calculateops\Catalog\Pricing\Price\CalculateCustomOptionCatalogRule;
+use Ootri\Calculateops\Catalog\Pricing\Price\CalculateCustomOptionCatalogRule;
 use Magento\Catalog\Pricing\Price\CustomOptionPriceInterface;
 use Magento\Framework\App\ObjectManager;
 
