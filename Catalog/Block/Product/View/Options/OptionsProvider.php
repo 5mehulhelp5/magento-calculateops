@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Ootri\Calculateops\Block\Product\View\Options;
+namespace Ootri\Calculateops\Catalog\Block\Product\View\Options;
 
 use Magento\Catalog\Block\Product\View\Options\AbstractOptions;
 use Magento\Framework\View\Element\Template\Context;
