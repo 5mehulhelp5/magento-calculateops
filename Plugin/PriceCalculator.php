@@ -46,7 +46,7 @@ class PriceCalculator
             $isPercent ? 1 : 0,
             $caller
         );
-        //\BredaBeds\Core\Helper\Notify::printLog($logString);
+        //\BredaBeds\Notifier\Helper\Notify::printLog($logString);
 
         // Always calculate the option price
         $finalPrice = $this->calculateOptionPrice($optionPrice, $isPercent, $regularPrice);
