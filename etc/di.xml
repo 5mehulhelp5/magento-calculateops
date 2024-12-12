@@ -1,26 +1,25 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
+    <!-- Surething_Calculateops: https://github.com/magento/magento2/issues/21879-->
+
     <!-- https://github.com/magento/magento2/pull/38464 -->
 
     <!-- ooedit: the Rule class below seems to be the same as the preference. disabling it makes no diff -->
     <!-- <preference for="Magento\CatalogRule\Model\Rule" type="Ootri\Calculateops\CatalogRule\Model\Rule" /> -->
 
-    <!-- <preference for="Magento\Catalog\Model\Product\Option" type="Ootri\Calculateops\Catalog\Model\Product\Option" /> -->
-    <!-- <preference for="Magento\Catalog\Model\Product\Option\Value" type="Ootri\Calculateops\Catalog\Model\Product\Option\Value" /> -->
-    <!-- <preference for="Magento\Catalog\Model\Product\Option\Type\Select" type="Ootri\Calculateops\Catalog\Model\Product\Option\Type\Select" /> -->
+    <!-- <preference for="Magento\Catalog\Model\Product\Option" type="Ootri\Calculateops\Catalog\Model\Product\Option" /> 
+    <preference for="Magento\Catalog\Model\Product\Option\Value" type="Ootri\Calculateops\Catalog\Model\Product\Option\Value" /> 
+    <preference for="Magento\Catalog\Model\Product\Option\Type\Select" type="Ootri\Calculateops\Catalog\Model\Product\Option\Type\Select" />  -->
     <!-- ooedit: the two preferences below seem to not make any difference on hyva -->
-    <!-- <preference for="Magento\Catalog\Model\Product\Option\Type\DefaultType" type="Ootri\Calculateops\Catalog\Model\Product\Option\Type\DefaultType" /> -->
-    <!-- <preference for="Magento\Catalog\Block\Product\View\Options\AbstractOptions" type="Ootri\Calculateops\Catalog\Block\Product\View\Options\AbstractOptions" /> -->
+    <!-- <preference for="Magento\Catalog\Model\Product\Option\Type\DefaultType" type="Ootri\Calculateops\Catalog\Model\Product\Option\Type\DefaultType" /> 
+    <preference for="Magento\Catalog\Block\Product\View\Options\AbstractOptions" type="Ootri\Calculateops\Catalog\Block\Product\View\Options\AbstractOptions" /> -->
 
 
     <!-- Product Option plugins -->
     <!-- ooedit: bufix for mirasvit_tm which cases the price to jump when adding a 2nd item to the cart -->
-    <preference for="Mirasvit\Tm\Plugin\PushOnCartAddPlugin" type="Ootri\Calculateops\Model\Mirasvit\PushOnCartAddPlugin" />
-
-
-    <!-- <preference for="Magento\Catalog\Block\Product\View\Options\AbstractOptions" type="Ootri\Calculateops\Block\Product\View\Options\OptionsProvider" /> -->
-
+    <!-- <preference for="Mirasvit\Tm\Plugin\PushOnCartAddPlugin" type="Ootri\Calculateops\Model\Mirasvit\PushOnCartAddPlugin" />
+ -->
 
     <type name="Magento\Catalog\Model\Product\Option"> 
         <plugin name="ootri_calculateops_product_option" type="Ootri\Calculateops\Plugin\ProductOptionPlugin" sortOrder="10"/>
@@ -33,5 +32,11 @@
     <type name="Magento\Catalog\Model\Product\Option\Type\Select"> 
         <plugin name="ootri_calculateops_select_type" type="Ootri\Calculateops\Plugin\SelectTypePlugin" sortOrder="10"/>
     </type>
+
+    <!-- New plugin to handle hyva price ViewModel -->
+    <type name="Hyva\Theme\ViewModel\ProductPrice">
+        <plugin name="ootri_calculateops_product_price_view_model" type="Ootri\Calculateops\Plugin\ProductPriceViewModelPlugin" sortOrder="10" />
+    </type>
+
 
 </config>

@@ -8,6 +8,7 @@ use Magento\Catalog\Model\Product\Option\Value;
 
 class ProductOptionPlugin
 {
+    
     public function __construct(
         private PriceCalculator $priceCalculator
     ){ }
