@@ -18,8 +18,7 @@
 
     <!-- Product Option plugins -->
     <!-- ooedit: bufix for mirasvit_tm which cases the price to jump when adding a 2nd item to the cart -->
-    <!-- <preference for="Mirasvit\Tm\Plugin\PushOnCartAddPlugin" type="Ootri\Calculateops\Model\Mirasvit\PushOnCartAddPlugin" />
- -->
+    <preference for="Mirasvit\Tm\Plugin\PushOnCartAddPlugin" type="Ootri\Calculateops\Model\Mirasvit\PushOnCartAddPlugin" />
 
     <type name="Magento\Catalog\Model\Product\Option"> 
         <plugin name="ootri_calculateops_product_option" type="Ootri\Calculateops\Plugin\ProductOptionPlugin" sortOrder="10"/>
@@ -37,6 +36,5 @@
     <type name="Hyva\Theme\ViewModel\ProductPrice">
         <plugin name="ootri_calculateops_product_price_view_model" type="Ootri\Calculateops\Plugin\ProductPriceViewModelPlugin" sortOrder="10" />
     </type>
-
 
 </config>

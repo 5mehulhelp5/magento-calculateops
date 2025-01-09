@@ -21,9 +21,11 @@ class ProductPriceViewModelPlugin
         $option,
         string $priceType,
         ?Product $product = null
-    ): float {
+    ): array {
         if ($priceType !== CustomOptionPrice::PRICE_CODE) {
-            return $result;
+            //2025-01-09 (include both final/regular prices)
+            //return $result;
+            return ['final' => $result, 'regular' => $result];
         }
 
         $calculatedPrice = $this->priceCalculator->calculateCustomOptionPrice(
@@ -32,6 +34,11 @@ class ProductPriceViewModelPlugin
             $option instanceof Value ? $option->getPriceType() === Value::TYPE_PERCENT : $option->getPriceType() === 'percent'
         );
 
-        return $calculatedPrice ?? $result;
+        //2025-01-09 (include both final/regular prices)
+        //return $calculatedPrice ?? $result;
+        return [
+            'final' => $calculatedPrice ?? $result,
+            'regular' => $result  // Original price before discount
+        ];
     }
 }
