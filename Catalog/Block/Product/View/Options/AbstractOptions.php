@@ -5,10 +5,10 @@
  */
 declare(strict_types=1);
 
-namespace Ootri\Calculateops\Catalog\Block\Product\View\Options;
+namespace BredaBeds\CalculateOps\Catalog\Block\Product\View\Options;
 
 use Magento\Catalog\Pricing\Price\BasePrice;
-use Ootri\Calculateops\Catalog\Pricing\Price\CalculateCustomOptionCatalogRule;
+use BredaBeds\CalculateOps\Catalog\Pricing\Price\CalculateCustomOptionCatalogRule;
 use Magento\Catalog\Pricing\Price\CustomOptionPriceInterface;
 use Magento\Framework\App\ObjectManager;
 

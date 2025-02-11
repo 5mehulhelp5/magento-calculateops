@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Ootri\Calculateops\CatalogRule\Model;
+namespace BredaBeds\CalculateOps\CatalogRule\Model;
 
 use Magento\Catalog\Model\Product;
 use Magento\Catalog\Model\ProductFactory;

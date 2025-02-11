@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Ootri\Calculateops\Catalog\Pricing\Price;
+namespace BredaBeds\CalculateOps\Catalog\Pricing\Price;
 
 use Magento\Catalog\Model\Product;
 use Magento\Catalog\Model\Product\PriceModifierInterface;

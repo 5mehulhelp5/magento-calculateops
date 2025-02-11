@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Ootri\Calculateops\Plugin;
+namespace BredaBeds\CalculateOps\Plugin;
 
 use Magento\Catalog\Model\Product;
 use Magento\CatalogRule\Pricing\Price\CatalogRulePrice;

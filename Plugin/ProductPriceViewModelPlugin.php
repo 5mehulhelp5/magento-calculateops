@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Ootri\Calculateops\Plugin;
+namespace BredaBeds\CalculateOps\Plugin;
 
 use Hyva\Theme\ViewModel\ProductPrice;
 use Magento\Catalog\Model\Product;
@@ -12,7 +12,7 @@ class ProductPriceViewModelPlugin
 {
 
     public function __construct(
-        private PriceCalculator $priceCalculator
+        private \BredaBeds\CalculateOps\Plugin\PriceCalculator $priceCalculator
     ){ }
 
     public function afterGetCustomOptionPrice(

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Ootri\Calculateops\Plugin;
+namespace BredaBeds\CalculateOps\Plugin;
 
 use Magento\Catalog\Model\Product\Option;
 use Magento\Catalog\Model\Product\Option\Value;
@@ -19,7 +19,7 @@ class SelectTypePlugin
     ];
 
     public function __construct(
-        private PriceCalculator $priceCalculator
+        private \BredaBeds\CalculateOps\Plugin\PriceCalculator $priceCalculator
     ){ }
 
     public function aroundGetOptionPrice(SelectType $subject, callable $proceed, $optionValue, $basePrice)
