@@ -1,4 +1,12 @@
 <?php
+
+// Reviewed on 2025-06-10
+/* Compare with:
+./vendor/hyva-themes/magento2-theme-module/src/ViewModel/ProductPrice.php
+https://gitlab.hyva.io/hyva-themes/magento2-theme-module/-/blob/main/src/ViewModel/ProductPrice.php
+https://gitlab.hyva.io/hyva-themes/magento2-theme-module/-/commits/main/src/ViewModel/ProductPrice.php?ref_type=heads
+*/
+
 declare(strict_types=1);
 
 namespace BredaBeds\CalculateOps\Plugin;

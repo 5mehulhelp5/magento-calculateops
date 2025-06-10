@@ -30,6 +30,12 @@ class PushOnCartAddPlugin
             return $result;
         }
 
+        // 2025-06-10 START: Added per the latest version of this file
+        if (!$result->isObjectNew()) {
+            return $result;
+        }
+        // 2025-06-10 END
+
         $productId = (int)$product->getId();
         if ($this->registry->hasCartAddedProduct($productId)) {
             return $result;
