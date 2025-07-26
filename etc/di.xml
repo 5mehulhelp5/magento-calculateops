@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
-    <!-- Surething_CalculateOps: https://github.com/magento/magento2/issues/21879-->
+    <!-- Surething_CalculateOps: https://github.com/magento/magento2/issues/21879 -->
 
     <!-- https://github.com/magento/magento2/pull/38464 -->
 
@@ -17,7 +17,7 @@
 
 
     <!-- Product Option plugins -->
-    <!-- ooedit: bufix for mirasvit_tm which cases the price to jump when adding a 2nd item to the cart -->
+    <!-- ooedit: bugfix for mirasvit_tm which causes the price to jump when adding a 2nd item to the cart -->
     <preference for="Mirasvit\Tm\Plugin\PushOnCartAddPlugin" type="BredaBeds\CalculateOps\Model\Mirasvit\PushOnCartAddPlugin" />
 
     <type name="Magento\Catalog\Model\Product\Option"> 
